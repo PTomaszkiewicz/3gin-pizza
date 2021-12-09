@@ -1,17 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="http://code.jquery.com/jquery-1.5.js"></script>
-    <script>
-      function countChar(val) {
-        var len = val.value.length;
-        if (len >= 500) {
-          val.value = val.value.substring(0, 500);
-        } else {
-          $('#charNum').text(500 - len);
-        }
-      };
-    </script>
   <title>3GIN-PIZZA | Zamów</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta charset="utf-8">
@@ -380,13 +369,21 @@
             </div>
             <br>
             <label for="numertel" style="margin-right:5px;">Telefon kontaktowy</label>
-            <input type="number" maxlength="12" style="width: 30vw;">
+            <input type="number" min="0" max="999999999999" style="width: 30vw;">
             <br>
             <label for="notka" style="font-size: 30px;">Uwagi</label>
             <br>
-            <textarea maxlength="500" onkeyup="countChar(this)" id="notka" style="width: 100%; height: 30vh;"></textarea>
+            <textarea placeholder="Maksiumum 500 znaków" maxlength="500" onkeyup='countChar();' id="notka" style="width: 100%; height: 30vh;"></textarea>
             <div style="color:#bbbbbbbb">
               <small>Pozostało </small><small id="charNum">500</small><small> znaków</small>
+              <script>
+                var textboxarea;
+                var textlenght;
+                function countChar(){
+                  textlenght = document.getElementById("notka").value.length;
+                  document.getElementById("charNum").innerHTML = 500-textlenght;
+                }
+              </script>
             </div>
           </div>
         </div>
