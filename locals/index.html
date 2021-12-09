@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>3GIN-PIZZA | Lokale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='../styles.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel='stylesheet' href='../styles.css'>
+  <link rel="icon" href='../images/pizza.png'>
+</head>
+<body>
+  <img src="../images/background.jpg" height="100%" width="auto" style="min-width: 100%;z-index: 1; position: fixed;">
+  <div class="row mb-3">
+    <div class='box'>
+      <div class='minibox'>
+        <img class="nav nav-pills" id='przycisk' onclick="menuhide()" src='../images/pizza.png'/>
+        <p id='start' onclick="menuhide()">Start</p>
+      </div>
+        <div class='mymenu' id='hidemenu'>
+            <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills" class='menuchoose'>
+                <script>function menuhide() {
+                    var x = document.getElementById("hidemenu");
+                    
+                    if (x.style.display === "block") {
+                      x.style.display = "none";
+                    
+                    } else {
+                      x.style.display = "block";
+                    
+                    }
+                  } </script>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Główna</a></li>
+                    <li class="nav-item"><a href="../menu/index.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="../orders/index.html" class="nav-link">Zamówienia</a></li>
+                    <li class="nav-item"><a class="nav-link" aria-current="page" style="color:#cccccc;">Lokale</a></li>
+                    <li class="nav-item"><a href="../info/index.html"class="nav-link">O nas</a></li>
+                    <li class="nav-item"><a href="../contact/index.html" class="nav-link">Kontakt</a></li>
+                </ul>
+                </header>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+<main>
+    <div class="row mb-3"></div>
+        <div>
+            <img src='../images/banner.png'  class='banner' >
+        </div>
+    </div>
+    <div class="row mb-3">
+        <p class="zawartość">
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Lokale</h1>
+                <hr>
+      </div>
+      <iframe width="550" height="400" frameborder="0" src="https://widgets.scribblemaps.com/sm/?d&z&l&gc&af&mc&lat=52.569670543&lng=21.242787943&vz=8&type=sm_road&ti&s&width=550&height=400&id=mz4O0Q6UgJ" style="border:0; max-width: 100%;" allowfullscreen allow="geolocation" loading="lazy"></iframe>
+      <div class="row mb-3">
+        <h2>Kontakt do lokali</h2>
+        <hr>
+        <div class="tekstleft">
+          <p class="bold">Mińsk Mazowiecki, Majowa</p>
+          <p><strong>Telefon:</strong> 777 777 777</p>
+          <p><strong>E-mail:</strong> 3ginpizza-minsk@gmial.com</p>
+          <p class="bold">Ostroleka, Mazowiecka</p>
+          <p><strong>Telefon:</strong> 444 444 444</p>
+          <p><strong>E-mail:</strong> 3ginpizza-ostroleka@gmial.com</p>
+          <p class="bold">Siedlce, Katedralna</p>
+          <p><strong>Telefon:</strong> 666 666 666</p>
+          <p><strong>E-mail:</strong> 3ginpizza-siedlce@gmial.com</p>
+          <p class="bold">Warszawa, Okuniewska</p>
+          <p><strong>Telefon:</strong> 888 888 888</p>
+          <p><strong>E-mail:</strong> 3ginpizza-okuniewska@gmial.com</p>
+          <p class="bold">Warszawa, aleja "Solidarności"</p>
+          <p><strong>Telefon:</strong> 999 999 999</p>
+          <p><strong>E-mail:</strong> 3ginpizza-solidarnosci@gmial.com</p>
+        </div>
+      </div>
+</main>
+</div>
+</body>
+</html>

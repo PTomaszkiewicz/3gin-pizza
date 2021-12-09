@@ -1,0 +1,446 @@
+.zawartość {
+    text-align: justify;
+}
+h1 {
+    text-align: center;
+}
+main{
+    position: relative;
+    z-index:2;
+    margin: 0px 5%;
+    padding: 0px 30px 50px 30px;
+    background-color: white;
+}
+.mymenu{
+    margin-left:5%;
+    position: absolute;
+    z-index: 997;
+    width:90%;
+    min-height: 165px;
+    background: rgb(208,87,27);
+    background: linear-gradient(180deg, rgba(208,87,27,1) 0%, rgba(208,87,27,1) 75%, rgba(9,9,121,0) 100%, rgba(5,4,77,0) 100%, rgba(0,212,255,0) 100%);
+    display:none;
+
+}
+
+body{
+    background-color: red;
+}
+.banner{
+    display: block;
+    height: auto;
+    width: 100%;
+}
+#przycisk{
+
+    z-index: 998;
+    width: 100%;
+    height: 100%;
+}
+.minibox{
+  width: 5%;
+  height: 5%;
+}
+.box {
+    position: fixed;
+    display: inline-flex;
+    z-index: 999;
+}
+.nav-link{
+    font-size: 35px;
+    z-index: 3;
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+.nav-link:hover{
+    color:orange;
+}
+.menuchoose{
+    margin: 0px 100px;
+}
+.minibox p{
+    border-radius: 30px;
+    position: absolute;
+    font-size: 1.5vw;
+    top: 50%;
+    margin-left:2.5vw;
+    z-index: 999;
+    transform: translate(-50%, -50%);
+    background: linear-gradient( rgba(9,9,121,0) 0%, rgba(0,0,0,0.3) 25%, rgba(0,0,0,0.3) 75%, rgba(9,9,121,0) 100%);
+    font-family:"Comic Sans MS", "Comic Sans", cursive;
+    text-shadow: 0 0 20px black;
+    color: white;
+}
+.box p::selection{
+    background: none;
+    text-shadow: 0 0 20px black;
+}
+.btn-primary{
+    background-color: chocolate;
+    border-color: white;
+}
+.btn-primary:hover{
+    background-color: gray;
+    border-color: white;
+}
+.btn-secondary{
+    background-color: orangered;
+    border-color: white;
+}
+.btn-secondary:hover{
+    background-color: gray;
+    border-color: white;
+}
+.card{
+    z-index: auto;
+    height: 320px;
+}
+.bottomaglin{
+    position: absolute;
+    bottom: 8px;
+}
+.container {
+    max-width: 960px;
+    position: static;
+    z-index: auto;
+  }
+  
+  /*
+   * Custom translucent site header
+   */
+  
+  .site-header {
+    background-color: rgba(0, 0, 0, .85);
+    -webkit-backdrop-filter: saturate(180%) blur(20px);
+    backdrop-filter: saturate(180%) blur(20px);
+  }
+  .site-header a {
+    color: #8e8e8e;
+    transition: color .15s ease-in-out;
+  }
+  .site-header a:hover {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /*
+   * Dummy devices (replace them with your own or something else entirely!)
+   */
+  
+  .product-device {
+    position: absolute;
+    right: 10%;
+    bottom: -30%;
+    width: 300px;
+    height: 540px;
+    background-color: #333;
+    border-radius: 21px;
+    transform: rotate(30deg);
+  }
+  
+  .product-device::before {
+    position: absolute;
+    top: 10%;
+    right: 10px;
+    bottom: 10%;
+    left: 10px;
+    content: "";
+    background-color: rgba(255, 255, 255, .1);
+    border-radius: 5px;
+  }
+  
+  .product-device-2 {
+    top: -25%;
+    right: auto;
+    bottom: 0;
+    left: 5%;
+    background-color: #e5e5e5;
+  }
+  
+  
+  /*
+   * Extra utilities
+   */
+  
+  .flex-equal > * {
+    flex: 1;
+  }
+  @media (min-width: 768px) {
+    .flex-md-equal > * {
+      flex: 1;
+    }
+  }
+.bold{
+    font-weight: 700;
+}
+.static {
+    position: static;
+}
+.tekstleft{
+    text-align: left;
+}
+.bd-placeholder-img {
+    font-size: 1.125rem;
+    text-anchor: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+  }
+
+  @media (min-width: 768px) {
+    .bd-placeholder-img-lg {
+      font-size: 3.5rem;
+    }
+  }
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    padding: 12px 16px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+ 
+  }
+.pizza1{
+    float:left;
+    display: block;
+}
+.show_selection{
+  margin-left: -10px;
+}
+.selection_title{
+  padding: 10px;
+  width: 100%;
+  background-color: red;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  display: inline-block;
+}
+.selection_title h2{
+  font-size: 40px;
+  color: white ;
+  float: left;
+  display: inline-flex;
+}
+.selection_title p{
+  color: white ;
+  float: right;
+  display: inline-flex;
+  font-size: 40px;
+}
+.selection_title p::selection{
+  background:none;
+}
+.selection_title h2::selection{
+  background:none;
+}
+.selection_content{
+  left:50%;
+  display: none;
+}
+.pizza_selection{
+  margin-top: -8px;
+  padding: 10px 50px;
+  width: 100%;
+  background-color: orange;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  display: inline-block;
+}
+.pizza_title h3{
+  color: white;
+  font-size: 35px;
+  display: inline-flex;
+}
+.pizza_selection p{
+  font-size:30px;
+  color: white;
+}
+.pizza_selection p::selection{
+  background: none;
+}
+.pizza_selection h3::selection{
+  background: none;
+}
+.pizza_title p{
+  font-size:30px;
+  color: white;
+  display: inline-flex;
+}
+.pizza_content{
+  display: none;
+  font-size:25px;
+  color: white;
+  padding-left: 20px;
+}
+.pizza_content input{
+  width: 50px;
+  color: black;
+  border: none;
+  background-color: rgba(255,255,255,5);
+}
+.choosen{
+  padding: 25px;
+}
+.salatki_title h3{
+  color: white;
+  font-size: 35px;
+  display: inline-flex;
+}
+.salatki_selection p{
+  font-size:30px;
+  color: white;
+}
+.salatki_selection p::selection{
+  background: none;
+}
+.salatki_selection h3::selection{
+  background: none;
+}
+.salatki_title p{
+  font-size:30px;
+  color: white;
+  display: inline-flex;
+}
+.salatki_content{
+  display: none;
+  font-size:25px;
+  color: white;
+  padding-left: 20px;
+}
+.salatki_content input{
+  width: 50px;
+  color: black;
+  border: none;
+  background-color: rgba(255,255,255,5);
+}
+.salatki_selection{
+  margin-top: -8px;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: orange;
+  display: inline-block;
+}
+.dodatki_title h3{
+  color: white;
+  font-size: 35px;
+  display: inline-flex;
+}
+.dodatki_selection p{
+  font-size:30px;
+  color: white;
+}
+.dodatki_selection p::selection{
+  background: none;
+}
+.dodatki_selection h3::selection{
+  background: none;
+}
+.dodatki_title p{
+  font-size:30px;
+  color: white;
+  display: inline-flex;
+}
+.dodatki_content{
+  display: none;
+  font-size:25px;
+  color: white;
+  padding-left: 20px;
+}
+.dodatki_content input{
+  width: 50px;
+  color: black;
+  border: none;
+  background-color: rgba(255,255,255,5);
+}
+.dodatki_selection{
+  margin-top: -8px;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: orange;
+  display: inline-block;
+}
+
+.napoje_title h3{
+  color: white;
+  font-size: 35px;
+  display: inline-flex;
+}
+.napoje_selection p{
+  font-size:30px;
+  color: white;
+}
+.napoje_selection p::selection{
+  background: none;
+}
+.napoje_selection h3::selection{
+  background: none;
+}
+.napoje_title p{
+  font-size:30px;
+  color: white;
+  display: inline-flex;
+}
+.napoje_content{
+  display: none;
+  font-size:25px;
+  color: white;
+  padding-left: 20px;
+}
+.napoje_content input{
+  width: 50px;
+  color: black;
+  border: none;
+  background-color: rgba(255,255,255,5);
+}
+.napoje_selection{
+  margin-top: -8px;
+  padding: 10px 10px;
+  width: 100%;
+  background-color: orange;
+  display: inline-block;
+}
+.box_info{
+  margin-left: -10px;
+}
+.additional_info{
+  padding: 10px;
+  width: 100%;
+  background-color: orangered;
+  border-radius: 30px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: black;
+  display: inline-block;
+}
+
+.additional_info h2{
+  font-size: 40px;
+  color: white ;
+  float: left;
+  display: inline-flex;
+}
+.additional_info p{
+  color: white ;
+  float: left;
+  display: inline-flex;
+}
+.additional_info label{
+  color: white ;
+  float: left;
+  display: inline-flex;
+}

@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="http://code.jquery.com/jquery-1.5.js"></script>
+    <script>
+      function countChar(val) {
+        var len = val.value.length;
+        if (len >= 500) {
+          val.value = val.value.substring(0, 500);
+        } else {
+          $('#charNum').text(500 - len);
+        }
+      };
+    </script>
+  <title>3GIN-PIZZA | Zamów</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="utf-8">
+  <link rel='stylesheet' href='../styles.css'>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel='stylesheet' href='../styles.css'>
+  <link rel="icon" href='../images/pizza.png'>
+</head>
+<body>
+  <img src="../images/background.jpg" height="100%" width="auto" style="z-index: 1;min-width: 100%; position: fixed;">
+  <div class="row mb-3">
+    <div class='box'>
+      <div class='minibox'>
+        <img class="nav nav-pills" id='przycisk' onclick="menuhide()" src='../images/pizza.png'/>
+        <p id='start' onclick="menuhide()">Start</p>
+      </div>
+        <div class='mymenu' id='hidemenu'>
+            <div class="container">
+            <header class="d-flex justify-content-center py-3">
+                <ul class="nav nav-pills" class='menuchoose'>
+                <script>function menuhide() {
+                    var x = document.getElementById("hidemenu");
+                    
+                    if (x.style.display === "block") {
+                      x.style.display = "none";
+                    
+                    } else {
+                      x.style.display = "block";
+                    
+                    }
+                  } </script>
+                    <li class="nav-item"><a href="../index.html" class="nav-link">Główna</a></li>
+                    <li class="nav-item"><a href="../menu/index.html" class="nav-link">Menu</a></li>
+                    <li class="nav-item"><a href="../orders/index.html" class="nav-link">Zamówienia</a></li>
+                    <li class="nav-item"><a href="../locals/index.html" class="nav-link">Lokale</a></li>
+                    <li class="nav-item"><a href="../info/index.html" class="nav-link">O nas</a></li>
+                    <li class="nav-item"><a href="../contact/index.html" class="nav-link">Kontakt</a></li>
+                </ul>
+                </header>
+            </div>
+          </div>
+          
+      </div>
+    </div>
+<main>
+    <div class="row mb-3"></div>
+        <div>
+            <img src='../images/banner.png'  class='banner' >
+        </div>
+    </div>
+  <div class="row mb-3">
+          <section class="py-5 text-center container">
+            <div class="row py-lg-5">
+              <div class="col-lg-6 col-md-8 mx-auto">
+                <h1 class="fw-light">Zamów</h1>
+                <hr>
+              </div>
+            </div>
+          </section>
+            <div class="show_selection" onclick="contenthide()">
+              <script>function contenthide() {
+                var x = document.getElementById("selection_content");
+                
+                if (x.style.display === "inline-block") {
+                  x.style.display = "none";
+                
+                } else {
+                  x.style.display = "inline-block";
+                
+                }
+              } </script>
+              <div class="selection_title">           
+                  <h2>Produkty</h2><p>+</p>
+              </div>
+            </div>
+            <div class="selection_content" id="selection_content">
+              <div class="pizza_selection row mb-3" >
+                <script>function pizzahide() {
+                  var x = document.getElementById("pizza_content");
+                  
+                  if (x.style.display === "inline-block") {
+                    x.style.display = "none";
+                  
+                  } else {
+                    x.style.display = "inline-block";
+                  
+                  }
+                } </script>
+                <div class="pizza_title" onclick="pizzahide()">
+                  <h3>Pizza<p styles="border-left: 2px solid white;">+</p></h3>
+                  <hr>
+                </div>
+                <div class="pizza_content row mb-3" id="pizza_content">
+                  <p>1. Margherita</p>
+                  <small>ser, sos pomidorowy</small>
+                    <div class="margherita-selection choosen">
+                      <div>
+                        28cm Ilość: <input type="number" id="margherita-x28" value="0" min ="0" max="50" onchange="zliczcene()"> 21,50zł/szt
+                        <br>
+						            32cm Ilość: <input type="number" id="margherita-x32" value="0" min ="0" max="50" onchange="zliczcene()"> 27,00zł/szt
+						            <br>
+						            42cm Ilość: <input type="number" id="margherita-x42" value="0" min ="0" max="50" onchange="zliczcene()"> 30,00zł/szt
+                      </div>
+                    </div>
+					        <p>2. Kebabowa</p>
+                  <small>kebab, cebula, sos tzatziki, ser, sos pomidorowy</small>
+                    <div class="kebabowa-selection choosen">
+                      <div>
+                          28cm Ilość: <input type="number" id="kebabowa-x28" value="0" min ="0" max="50" onchange="zliczcene()"> 22,50zł/szt
+						              <br>
+						              32cm Ilość: <input type="number" id="kebabowa-x32" value="0" min ="0" max="50" onchange="zliczcene()"> 29,00zł/szt
+						              <br>
+						              42cm Ilość: <input type="number" id="kebabowa-x42" value="0" min ="0" max="50" onchange="zliczcene()"> 32,00zł/szt
+                      </div>
+                    </div>
+                  <p>3. Nie hawajska</p>
+                  <small>szynka, salami, cebula, pomidor, pieczarki, ser, sos pomidorowy</small>
+                  <div class="nhawajska-selection choosen">
+                      <div>
+                          28cm Ilość: <input type="number" id="nhawajska-x28" value="0" min ="0" max="50" onchange="zliczcene()"> 24,00/szt
+						              <br>
+						              32cm Ilość: <input type="number" id="nhawajska-x32" value="0" min ="0" max="50" onchange="zliczcene()"> 30,00zł/szt
+						              <br>
+						              42cm Ilość: <input type="number" id="nhawajska-x42" value="0" min ="0" max="50" onchange="zliczcene()"> 34,00zł/szt
+                        </div>
+                    </div>
+                  <p>4. Grecka</p>
+                  <small>szynka, oliwki, ser biały, ser, bazylia, sos pomidorowy</small>
+                    <div class="grecka-selection choosen">
+                        <div>
+                            28cm Ilość: <input type="number" id="grecka-x28" value="0" min ="0" max="50" onchange="zliczcene()"> 23,00zł/szt
+                            <br>
+                            32cm Ilość: <input type="number" id="grecka-x32" value="0" min ="0" max="50" onchange="zliczcene()"> 29,50zł/szt
+                            <br>
+                            42cm Ilość: <input type="number" id="grecka-x42" value="0" min ="0" max="50" onchange="zliczcene()"> 33,00zł/szt
+                          </div>
+                      </div>
+                    <p>5. Jeżeli chodzi o pizze, to można powiedzieć, że jestem jaroszem
+                    </p>
+                      <small>tuńczyk, pieczarki, ser, sos pomidorowy</small>
+                        <div class="jarosz-selection choosen">
+                            <div>
+                                28cm Ilość: <input type="number" id="jarosz-x28" value="0" min ="0" max="50" onchange="zliczcene()"> 22,50zł/szt
+                                <br>
+                                32cm Ilość: <input type="number" id="jarosz-x32" value="0" min ="0" max="50" onchange="zliczcene()"> 29,00zł/szt
+                                <br>
+                                42cm Ilość: <input type="number" id="jarosz-x42" value="0" min ="0" max="50" onchange="zliczcene()"> 32,00zł/szt
+                              </div>
+                          </div>
+                          <p>6. Wieśniacka
+                          </p>
+                            <small>kiełbasa, cebula, boczek, ogórek konserwowy, ser, sos pomidorowy</small>
+                              <div class="wiesniacka-selection choosen">
+                                  <div>
+                                      28cm Ilość: <input type="number" id="wiesniacka-x28" value="0" min ="0" max="50" onchange="zliczcene()"> 23,50zł/szt
+                                      <br>
+                                      32cm Ilość: <input type="number" id="wiesniacka-x32" value="0" min ="0" max="50" onchange="zliczcene()"> 29,50zł/szt
+                                      <br>
+                                      42cm Ilość: <input type="number" id="wiesniacka-x42" value="0" min ="0" max="50" onchange="zliczcene()"> 33,50zł/szt
+                                    </div>
+                                </div>
+                  <hr style="color:black;">
+                </div>
+            <div class="salatki_selection row mb-3" >
+              <script>function salatkihide() {
+                var x = document.getElementById("salatki_content");
+                
+                if (x.style.display === "inline-block") {
+                  x.style.display = "none";
+                
+                } else {
+                  x.style.display = "inline-block";
+                
+                }
+              } </script>
+              <div class="salatki_title" onclick="salatkihide()">
+                <h3>Salatki<p styles="border-left: 2px solid white; ">+</p></h3>
+                <hr>
+              </div>
+              <div class="salatki_content row mb-3" id="salatki_content">
+                <p>1. Z kurczakiem</p>
+                  <small>różne sałaty, kurczak, cebula, pomidor, pestki słonecznika</small>
+                    <div class="kurczak-selection choosen">
+                      <div>
+						            Ilość: <input type="number" id="kurczak" value="0" min ="0" max="50" onchange="zliczcene()"> 20,00zł/por
+                      </div>
+                    </div>
+                    <p>2. Grecka</p>
+                    <small>różne sałaty, ser feta, cebula, pomidor, ogórek, papryka, oliwki</small>
+                      <div class="sgrecka-selection choosen">
+                        <div>
+                          Ilość: <input type="number" id="sgrecka" value="0" min ="0" max="50" onchange="zliczcene()"> 20,00zł/por
+                        </div>
+                      </div>
+                      <hr style="color:black;">
+              </div>
+            </div>
+            <div class="dodatki_selection row mb-3" >
+              <script>function dodatkihide() {
+                var x = document.getElementById("dodatki_content");
+                
+                if (x.style.display === "inline-block") {
+                  x.style.display = "none";
+                
+                } else {
+                  x.style.display = "inline-block";
+                
+                }
+              } </script>
+              <div class="dodatki_title" onclick="dodatkihide()">
+                <h3>Dodatki<p styles="border-left: 2px solid white;">+</p></h3>
+                <hr>
+              </div>
+              <div class="dodatki_content row mb-3" id="dodatki_content">
+                <p>1. Frytki</p>
+                  <div class="frytki-selection choosen">
+                    <div>
+                      Ilość: <input type="number" id="frytki" value="0" min ="0" max="100" onchange="zliczcene()"> 7,00zł/por
+                    </div>
+                  </div>
+                  <p>2. Pieczone ziemniaki</p>
+                  <div class="ziemniaki-selection choosen">
+                    <div>
+                      Ilość: <input type="number" id="ziemniaki" value="0" min ="0" max="100" onchange="zliczcene()"> 10,00zł/por
+                    </div>
+                  </div>
+                  <p>3. Nuggetsy (6 sztuk)</p>
+                  <div class="nuggetsy-selection choosen">
+                    <div>
+                      Ilość: <input type="number" id="nuggetsy" value="0" min ="0" max="100" onchange="zliczcene()"> 15,00zł/por
+                    </div>
+                  </div>
+                  <p>4. Sosy</p>
+                  <div class="sosy-selection choosen">
+                    <div>
+                      Pomidorowy
+                      <br>
+                     Ilość: <input type="number" id="pomidorowy" value="0" min ="0" max="100"  onchange="zliczcene()"> 4,00zł/opk
+                     <br>
+                     Czosnkowy
+                     <br>
+                      Ilość: <input type="number" id="czosnkowy" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/opk
+                     <br>
+                     Tysiąc wysp
+                     <br>
+                      Ilość: <input type="number" id="tysiac_wysp" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/opk
+                     <br>
+                     Hawajski
+                     <br>
+                      Ilość: <input type="number" id="hawajski" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/opk
+                     <br>
+                     Gyros
+                     <br>
+                      Ilość: <input type="number" id="gyros" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/opk
+                    </div>
+                  </div>
+                  <hr style="color:black;">
+              </div>
+              <div class="napoje_selection row mb-3" >
+                <script>function napojehide() {
+                  var x = document.getElementById("napoje_content");
+                  
+                  if (x.style.display === "inline-block") {
+                    x.style.display = "none";
+                  
+                  } else {
+                    x.style.display = "inline-block";
+                  
+                  }
+                } </script>
+                <div class="napoje_title" onclick="napojehide()">
+                  <h3>Napoje<p styles="border-left: 2px solid white;">+</p></h3>
+                </div>
+                <div class="napoje_content row mb-3" id="napoje_content">
+                  <hr style="color:black;">
+                  <p>1. Cola</p>
+                  <div class="cola-selection choosen">
+                    <div>
+                      Coca cola
+                      <br>
+                      100ml Ilość: <input type="number" id="coca-x100" value="0" min ="0" max="100" onchange="zliczcene()"> 3,50zł/but
+                      <br>
+                      250ml Ilość: <input type="number" id="coca-x250" value="0" min ="0" max="100" onchange="zliczcene()"> 7,00zł/but
+                      <br>
+                      Pepsi
+                      <br>
+                      100ml Ilość: <input type="number" id="pepsi-x100" value="0" min ="0" max="100" onchange="zliczcene()"> 3,50zł/but
+                      <br>
+                      250ml Ilość: <input type="number" id="pepsi-x250" value="0" min ="0" max="100" onchange="zliczcene()"> 7,00zł/but
+                      
+                    </div>
+                  </div>
+                    <p>2. Woda</p>
+                    <div class="cola-selection choosen">
+                      <div>
+                        Niegazowana
+                        <br>
+                        250ml Ilość: <input type="number" id="wodang-x250" value="0" min ="0" max="100" onchange="zliczcene()"> 2,00zł/but
+                        <br>
+                        500ml Ilość: <input type="number" id="wodang-x500" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/but
+                        <br>
+                        Lekkogazowana
+                        <br>
+                        250ml Ilość: <input type="number" id="wodalg-x250" value="0" min ="0" max="100" onchange="zliczcene()"> 2,00zł/but
+                        <br>
+                        500ml Ilość: <input type="number" id="wodalg-x500" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/but
+                        <br>
+                        Gazowana
+                        <br>
+                        250ml Ilość: <input type="number" id="wodag-x250" value="0" min ="0" max="100" onchange="zliczcene()"> 2,00zł/but
+                        <br>
+                        500ml Ilość: <input type="number" id="wodag-x500" value="0" min ="0" max="100" onchange="zliczcene()"> 4,00zł/but
+                      </div>
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+        </div>
+        <div class="box_info">
+          <div class="additional_info">
+            <div style="display: inline-flex;">
+              <h2>Dodatkowe informacje</h2>
+            </div>
+            
+            <br>
+            <hr>
+            <p>Sposób dostawy:</p>
+            <br>
+            <br>
+            <div class="radio_butt">
+              <input type="radio" id="dost1" name="dost" value="dost1" onclick="if(this.checked){lokalehide()}">
+              <label for="dost1" style="margin-right:5px;">Na miejscu</label>
+              <br>
+              <label for="dost2" style="margin-right:5px;">Dostawa na adres (tylko na terenie dostaw) koszt 10zł</label>
+              <input type="radio" id="dost2" name="dost" value="dost2" onclick="if(this.checked){adreshide()}">
+
+            </div>
+
+            <script>function lokalehide() {
+                  document.getElementById('locals_choose').style.display = "block";
+                  document.getElementById('dost-addr').style.display = 'none';
+                }
+            </script>
+            
+            <script>function adreshide() {
+              document.getElementById('locals_choose').style.display = "none";
+              document.getElementById('dost-addr').style.display = 'block';
+            }
+        </script>
+            <br>
+            <div id='locals_choose' style="display: none;">
+              <input list="locals" onfocus="this.value=''" onchange="this.blur();" style="width: 30vw;">
+              <label for="locals" style="margin-right:5px;">Wybierz lokal</label>
+              <datalist id="locals">
+                <option value="Mińsk Mazowiecki, Majowa">
+                <option value="Ostroleka, Mazowiecka">
+                <option value="Siedlce, Katedralna">
+                <option value="Warszawa, Okuniewska">
+                <option value='Warszawa, aleja "Solidarności"'>
+              </datalist>
+            </div>
+            <div id='dost-addr' style="display: none;">
+              <input type='text' id='adres' minlength='5' value="" maxlength='120' style="width: 30vw;">
+              <label for='adres' style="margin-right:5px;">Podaj adres</label>
+            </div>
+            <br>
+            <label for="numertel" style="margin-right:5px;">Telefon kontaktowy</label>
+            <input type="number" maxlength="12" style="width: 30vw;">
+            <br>
+            <label for="notka" style="font-size: 30px;">Uwagi</label>
+            <br>
+            <textarea maxlength="500" onkeyup="countChar(this)" id="notka" style="width: 100%; height: 30vh;"></textarea>
+            <div style="color:#bbbbbbbb">
+              <small>Pozostało </small><small id="charNum">500</small><small> znaków</small>
+            </div>
+          </div>
+        </div>
+        <div class='wynik_ceny'>
+        <p>Razem: </p><p id='cena'>0</p><p> zł</p>
+      </div>
+      <script>
+        var sumakosztu = 0;
+        var iloscsztuk;
+        var wynikkosztu;
+        function policzcene(id, koszt){
+          iloscsztuk = parseInt(document.getElementById(id).value);
+          wynikkosztu = iloscsztuk*koszt;
+          sumakosztu = sumakosztu + wynikkosztu;
+        }
+        function zliczcene(){
+        sumakosztu = 0;
+        policzcene("margherita-x28", 21.5);
+        policzcene("margherita-x32", 27);
+        policzcene("margherita-x42", 30);
+        policzcene("kebabowa-x28", 22.5);
+        policzcene("kebabowa-x32", 29);
+        policzcene("kebabowa-x42", 32);
+        policzcene("nhawajska-x28", 24);
+        policzcene("nhawajska-x32", 30);
+        policzcene("nhawajska-x42", 34);
+        policzcene("grecka-x28", 23);
+        policzcene("grecka-x32", 29.5);
+        policzcene("grecka-x42", 33);
+        policzcene("jarosz-x28", 22.5);
+        policzcene("jarosz-x32", 29);
+        policzcene("jarosz-x42", 32);
+        policzcene("wiesniacka-x28", 23.5);
+        policzcene("wiesniacka-x32", 29.5);
+        policzcene("wiesniacka-x42", 33.5);
+        policzcene("kurczak", 20);
+        policzcene("sgrecka", 20);
+        policzcene("frytki", 7);
+        policzcene("ziemniaki", 7);
+        policzcene("nuggetsy", 15);
+        policzcene("czosnkowy", 4);
+        policzcene("tysiac_wysp", 4);
+        policzcene("hawajski", 4);
+        policzcene("gyros", 4);
+        policzcene("coca-x100", 3.5);
+        policzcene("coca-x250", 7);
+        policzcene("pepsi-x100", 3.5);
+        policzcene("pepsi-x250", 7);
+        policzcene("wodang-x250", 2);
+        policzcene("wodang-x500", 4);
+        policzcene("wodalg-x250", 2);
+        policzcene("wodalg-x500", 4);
+        policzcene("wodag-x250", 2);
+        policzcene("wodag-x500", 4);
+        document.getElementById("cena").innerHTML = sumakosztu;
+        }
+      </script>
+    </div>
+</main>
+</div>
+</body>
+</html>
